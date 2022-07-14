@@ -22,7 +22,7 @@ algorithm= input ("Explain the algorithm for finding the power set of a given se
 print ("such a nice answer") 
 print ("ok ") 
 print (" A basic question ") 
-ceo = input(who is the CEO of Google?.") 
+ceo = input(who is the ceo of google?.") 
 print= (" One more too basic question ") 
 googlefounder= input (" Who is founder of Google ") 
 print (" Ok. A last question ") 
