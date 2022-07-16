@@ -1,4 +1,4 @@
-   {
+{
      "name": "Google interview bot", 
      "description": "A telegram bot based on  google will help people to crack googler interview", 
      "author": "shubham", 
@@ -15,4 +15,4 @@
                    "required":"True" 
               } 
         }
-   }
+}
