@@ -1,3 +1,24 @@
+import telegram
+from telegram import ChatAction, InlineKeyboardButton,InlineKeyboardMarkup
+from telegram.ext import Updater, CommandHandler,MessageHandler,Filters,CallbackQueryHandler,PicklePersistence
+from telegram.ext.dispatcher import run_async
+from telegram_bot_pagination import InlineKeyboardPaginator
+import logging
+import os
+import requests
+from tpblite import TPB
+t = TPB()
+
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
+
+logger = logging.getLogger(__name__)
+
+@run_async
+def start(update,context):
+	name=update.message.chat.first_name
+	update.message.reply_text("Hi! "+name+"\nWelcome to google interview Bot 😃,\n using this help you to crack googler interview get started")
+
 print("hello🙋‍♂️ my future Googler") 
 print("hello I am a Google interview bot") 
 print("so, my future Googler") 
