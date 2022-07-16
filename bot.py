@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 def start(update,context):
 	name=update.message.chat.first_name
 	update.message.reply_text("Hi! "+name+"\nWelcome to google interview Bot 😃,\n using this help you to crack googler interview get started")
-
+#(/run to run command) 
 print("hello🙋‍♂️ my future Googler") 
 print("hello I am a Google interview bot") 
 print("so, my future Googler") 
