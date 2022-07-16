@@ -52,3 +52,29 @@ about = input ("How would you explain programming and programming languages to a
 #This interview is complete 
 input("We will give you answer after checking .type ok to confirm : ") 
 input("Have a nice day")
+def button(update,context):
+	result=context.user_data['result']
+	query = update.callback_query
+	query.answer()
+	
+	page = int(query.data)
+	paginator = InlineKeyboardPaginator(len(result),current_page=page,data_pattern='{page}')
+	query.edit_message_text(text=result[page - 1],reply_markup=paginator.markup,parse_mode=telegram.ParseMode.HTML)
+
+persistence=PicklePersistence('googledata')
+def main():
+    token=os.environ.get("bot_token", "")
+    updater = Updater(token,use_context=True, persistence=persistence)
+    dp=updater.dispatcher
+    dp.add_handler(CommandHandler('start',start))
+    dp.add_handler(CommandHandler('history', history))
+    dp.add_handler(CommandHandler("clear",clear))
+    dp.add_handler(MessageHandler(Filters.regex(r'(/google_bot_link*)'),getlink))
+    dp.add_handler(MessageHandler(Filters.text, search))
+    dp.add_handler(CallbackQueryHandler (button))
+    updater.start_polling()
+    updater.idle()
+ 
+	
+if __name__=="__main__":
+	main()
