@@ -1,0 +1,1 @@
+{ "name": "Google interview bot", "description": "A telegram bot based on  google will help people to crack googler interview", "author": "shubham", "keywords": [ "Google", "interview links", "telegram bot", "python" ], "repository": "https://github.com/Shubham8799/telegram_bot", "env":{ "bot_token":{ "description":"Telegram bot token", "required":"True" } }}
